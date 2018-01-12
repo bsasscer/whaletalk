@@ -1,17 +1,25 @@
-var input = "The term hiccup is an example of onomatopoeia";
-var vowels = ['a', 'e', 'i', 'o', 'u'];
-var resultArray = [];
+//when the button is clicked
+//translate the sentence
+//show the result
 
-for (var i = 0; i < input.length; i++) {
-    for (var j = 0; j < vowels.length; j++) {
-        if (input[i] === vowels[j]) {
-            resultArray.push(input[i]);
+var userInput = document.getElementById('textToTranslate').value;
+var vowels = ['a', 'e', 'i', 'o', 'u'];
+var resultArray = [ ];
+
+document.getElementById('submitSentence').addEventListener('click', translateSentence);
+
+function translateSentence() {
+    for (var i = 0; i < userInput.length; i++) {
+        for (var j = 0; j < vowels.length; j++) {
+            if (userInput[i] === vowels[j]) {
+                resultArray.push(userInput[i]);
+            }
+        }
+
+        if (userInput[i] === 'e' || userInput[i] === 'u') {
+            resultArray.push(userInput[i]);
         }
     }
 
-    if (input[i] === 'e' || input[i] === 'u') {
-        resultArray.push(input[i]);
-    }
-}
-
-console.log(resultArray.join('').toUpperCase());
+    console.log(resultArray.join('').toUpperCase());
+};

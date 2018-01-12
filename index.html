@@ -4,12 +4,15 @@
         <link rel="stylesheet" type="text/css" href="styles.css"  />
     </head>
     <body>
-        <h1>Whale Talk</h1>
-        <p>Translate your sentence into whale!</p>
-        <form>
-            <input type="text" placeholder="Type your sentence here" />
-            <button id="submitSentence">Translate!</button>
-        </form>
+        <div class="container">
+            <h1>Whale Talk</h1>
+            <p>Translate your sentence into whale!</p>
+            <form>
+                <input type="text" placeholder="Type your sentence here" id="textToTranslate" />
+                <button type="submit" id="submitSentence">Translate!</button>
+            </form>
+            <div class="result"></div>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>
